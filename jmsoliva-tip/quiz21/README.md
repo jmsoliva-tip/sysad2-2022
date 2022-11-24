@@ -5,16 +5,16 @@
 4. /etc/ansible/ansible.cfg
 
 ## How to create an ansible inventory
-...You can create your inventory file in one of many formats, depending on the inventory plugins you have. The most common formats are INI and YAML. A basic INI /etc/ansible/hosts might look like this:
-...mail.example.com
-...[webservers]
-...foo.example.com
-...bar.example.com
+⋅⋅⋅You can create your inventory file in one of many formats, depending on the inventory plugins you have. The most common formats are INI and YAML. A basic INI /etc/ansible/hosts might look like this:
+- mail.example.com
+- [webservers]
+- foo.example.com
+- bar.example.com
 
-...[dbservers]
-...one.example.com
-...two.example.com
-...three.example.com
+- [dbservers]
+- one.example.com
+- two.example.com
+- three.example.com
 
 ## How to create an Ad-hoc Ansible command with setup and shell module.
 1. $ ssh-agent bash 
