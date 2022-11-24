@@ -1,7 +1,8 @@
-- name: MOTD
+---
 
+- name: Creating MOTD
   vars:
-    declared_variable: "Ansible Managed node by apangilinan-tip"
-
-  ansible.builtin.debug:
-    msg: "Welcome!"
+   variable1: 'Welcome!'
+  ansible.builtin.template:
+    src: /root/sysad2-2022/Prelim-exam/roles/ChangeMOTD/files/MOTD.j2
+    dest: /etc/motd
