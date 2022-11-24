@@ -1,10 +1,10 @@
-**How to create an ansible configuration
-a.) ANSIBLE_CONFIG (environment variable if set)
-b.) ansible.cfg (in the current directory)
-c.) ~/.ansible.cfg (in the home directory)
-d.) /etc/ansible/ansible.cfg
+## How to create an ansible configuration
+1. ANSIBLE_CONFIG (environment variable if set)
+2. ansible.cfg (in the current directory)
+3. ~/.ansible.cfg (in the home directory)
+4. /etc/ansible/ansible.cfg
 
-**How to create an ansible inventory
+## How to create an ansible inventory
 - You can create your inventory file in one of many formats, depending on the inventory plugins you have. The most common formats are INI and YAML. A basic INI /etc/ansible/hosts might look like this:
 - mail.example.com
 - [webservers]
@@ -16,7 +16,7 @@ d.) /etc/ansible/ansible.cfg
 - two.example.com
 - three.example.com
 
-**How to create an Ad-hoc Ansible command with setup and shell module.
+## How to create an Ad-hoc Ansible command with setup and shell module.
 - $ ssh-agent bash 
 - $ ssh-add ~/.ssh/id_rsa 
 - $ Ansible abc -a "/sbin/reboot" -f 12
