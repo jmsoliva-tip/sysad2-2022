@@ -1,0 +1,63 @@
+---
+- tasks:
+  - name: install chrony
+    apt:
+      name: chrony
+      state: latest
+      update_cache: true
+
+  - name: restart NTP service
+    service:
+      name: chrony
+      state: started
+
+  - name: install openstack packages
+    apt:
+      name: openstack packages
+      state: latest
+      update_cache: true
+
+  - name: install mariadb-server
+    apt:
+      pkg:
+        - mariadb-server
+        - python3-pymysql
+      state: latest
+      update_cache: true
+
+  - name: install rabbitmq-server
+    apt:
+      name: rabbitmq-server
+      state: latest
+      update_cache: true
+
+  - name: add openstack user
+    user:
+      name: message queue
+      group: openstack
+
+  - name: install memcached
+    apt:
+      pkg:
+        - memcached
+        - python-memcache
+      state: latest
+      update_cache: true
+
+  - name: restart memcached
+    service:
+      name: memcached
+      state: started
+
+  - name: install etcd
+    apt:
+      name: etcd
+      state: latest
+      update_cache: true
+
+  - name: restart etcd
+    service:
+      name: etcd
+      state: started
+
+
