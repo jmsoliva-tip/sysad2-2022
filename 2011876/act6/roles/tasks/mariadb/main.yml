@@ -1,4 +1,0 @@
-- name: install mariadb
-  apt:
-    name: mariadb-server
-    update_cache: yes
